@@ -570,8 +570,8 @@ def model_gen(**configs):
                                 if isinstance(value, float):
                                     check_type = True
                             elif field_type == "decimal":
-                                value = decimal.Decimal(value)
-                                check_type = isinstance(value, decimal.Decimal)
+                                value = float(value)
+                                check_type = isinstance(value, float)
                             elif field_type == "datetime":
                                 if isinstance(value, (str, unicode)):
                                     try:
